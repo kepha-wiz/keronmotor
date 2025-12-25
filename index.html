@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Keron Motors | Home</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Oswald:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    
+    <style>
+        /* --- CSS VARIABLES & RESET --- */
+        :root {
+            --primary: #004d40;
+            --primary-light: #00796b;
+            --accent: #ff6f00;
+            --dark: #121212;
+            --dark-light: #1e1e1e;
+            --light: #f4f4f4;
+            --white: #ffffff;
+            --border: 2px solid var(--dark);
+            --border-radius: 0px;
+            --shadow: 4px 4px 0px var(--dark);
+            --shadow-hover: 2px 2px 0px var(--dark);
+            --font-head: 'Oswald', sans-serif;
+            --font-body: 'Inter', sans-serif;
+            --container: 1200px;
+        }
+
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        html { scroll-behavior: smooth; }
+        body { font-family: var(--font-body); background-color: var(--light); color: var(--dark); line-height: 1.6; overflow-x: hidden; }
+        h1, h2, h3, h4, h5 { font-family: var(--font-head); text-transform: uppercase; line-height: 1.2; }
+        a { text-decoration: none; color: inherit; }
+        ul { list-style: none; }
+        img { max-width: 100%; display: block; }
+
+        /* --- UTILITIES --- */
+        .container { max-width: var(--container); margin: 0 auto; padding: 0 20px; }
+        .section-padding { padding: 80px 0; }
+        .text-accent { color: var(--accent); }
+        .text-primary { color: var(--primary); }
+
+        .btn {
+            display: inline-block; padding: 14px 28px; font-family: var(--font-head);
+            font-weight: 700; letter-spacing: 1px; text-transform: uppercase;
+            border: var(--border); cursor: pointer; transition: all 0.2s ease;
+            background: var(--dark); color: var(--white);
+        }
+        .btn:hover { background: var(--accent); border-color: var(--accent); color: var(--dark); transform: translate(-2px, -2px); box-shadow: var(--shadow); }
+        .btn-outline { background: transparent; color: var(--dark); }
+        .btn-outline:hover { background: var(--dark); color: var(--white); transform: translate(2px, 2px); box-shadow: none; }
+
+        /* --- HEADER --- */
+        header { background: var(--white); border-bottom: var(--border); position: sticky; top: 0; z-index: 1000; padding: 15px 0; }
+        .nav-wrapper { display: flex; justify-content: space-between; align-items: center; }
+        .logo { font-family: var(--font-head); font-size: 1.8rem; font-weight: 700; display: flex; align-items: center; gap: 10px; }
+        .logo span { color: var(--primary); }
+        .logo-mark { width: 30px; height: 30px; background: var(--accent); display: inline-block; }
+        nav ul { display: flex; gap: 30px; }
+        nav a { font-weight: 500; text-transform: uppercase; font-size: 0.9rem; position: relative; }
+        nav a::after { content: ''; position: absolute; width: 0; height: 2px; bottom: -5px; left: 0; background-color: var(--accent); transition: width 0.3s; }
+        nav a:hover::after { width: 100%; }
+
+        .mobile-toggle { display: none; font-size: 1.5rem; cursor: pointer; }
+
+        /* --- HERO --- */
+        .hero { background-color: var(--dark); color: var(--white); padding: 120px 0; border-bottom: var(--border); }
+        .hero h1 { font-size: 4rem; margin-bottom: 20px; }
+        .hero p { font-size: 1.2rem; margin-bottom: 30px; color: #ccc; max-width: 600px; }
+        
+        .hero-image img { 
+            border: var(--border); 
+            box-shadow: var(--shadow); 
+            width: 100%; 
+            /* KEY STYLE FOR SLIDESHOW: Smooth opacity transition */
+            transition: opacity 0.8s ease-in-out; 
+        }
+        .hero-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 50px; align-items: center; }
+
+        /* --- CARDS --- */
+        .feature-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; }
+        .card { background: var(--white); border: var(--border); padding: 40px; transition: transform 0.2s; }
+        .card:hover { transform: translateY(-5px); box-shadow: var(--shadow); }
+        .icon-box { width: 60px; height: 60px; background: var(--primary); margin-bottom: 20px; display: flex; align-items: center; justify-content: center; color: var(--white); }
+
+        /* --- FOOTER --- */
+        footer { background: #000; color: #888; padding: 60px 0 20px; border-top: 5px solid var(--accent); }
+        .footer-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 40px; margin-bottom: 40px; }
+        .footer-links li { margin-bottom: 10px; }
+        .footer-links a:hover { color: var(--accent); }
+        .footer-bottom { border-top: 1px solid #222; padding-top: 20px; display: flex; justify-content: space-between; }
+        .whatsapp-float { position: fixed; bottom: 30px; right: 30px; background-color: #25d366; color: white; width: 60px; height: 60px; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 2px 2px 10px rgba(0,0,0,0.3); z-index: 1000; border: 2px solid white; }
+
+        /* --- RESPONSIVE --- */
+        @media (max-width: 768px) {
+            .hero-grid { grid-template-columns: 1fr; }
+            .hero h1 { font-size: 2.5rem; }
+            .mobile-toggle { display: block; }
+            nav ul { display: none; flex-direction: column; position: absolute; top: 100%; left: 0; width: 100%; background: var(--white); padding: 20px; border-bottom: var(--border); }
+            nav ul.active { display: flex; }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container nav-wrapper">
+            <a href="index.html" class="logo">
+                <span class="logo-mark"></span>
+                KERON <span>MOTORS</span>
+            </a>
+            <div class="mobile-toggle" onclick="toggleMenu()">☰</div>
+            <nav>
+                <ul id="nav-menu">
+                    <li><a href="index.html" class="active">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="fleet.html">Our Tuk Tuks</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="branches.html">Branches</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="container hero-grid">
+                <div>
+                    <h1>Your Trusted Partner for Tuk Tuk Cargo Tricycles</h1>
+                    <p>Reliable and efficient cargo tricycles across Jinja, Masaka, Mbarara, and beyond. We keep your business moving.</p>
+                    <div style="display: flex; gap: 15px;">
+                        <a href="fleet.html" class="btn">View Models</a>
+                        <a href="branches.html" class="btn btn-outline">Find a Branch</a>
+                    </div>
+                </div>
+                
+                <!-- HERO SLIDESHOW CONTAINER -->
+                <div class="hero-image">
+                    <!-- ID 'hero-slideshow-img' is used by the script below -->
+                    <img id="hero-slideshow-img" src="1.jpg" alt="Keron Motors">
+                </div>
+            </div>
+        </section>
+
+        <section class="section-padding" style="background: var(--white);">
+            <div class="container">
+                <div class="feature-grid">
+                    <div class="card">
+                        <div class="icon-box">★</div>
+                        <h3>High-Quality Tuk Tuks</h3>
+                        <p>Robust and efficient cargo tricycles designed for Ugandan terrain.</p>
+                    </div>
+                    <div class="card">
+                        <div class="icon-box">⚙</div>
+                        <h3>Expert Servicing</h3>
+                        <p>Dedicated technicians ensuring your vehicle receives the best care.</p>
+                    </div>
+                    <div class="card">
+                        <div class="icon-box">⚡</div>
+                        <h3>Genuine Spare Parts</h3>
+                        <p>Comprehensive range of authentic parts for lasting performance.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section-padding" style="background: var(--dark); color: var(--white); text-align: center;">
+            <div class="container">
+                <h2>Find Your Perfect Match</h2>
+                <p style="max-width: 600px; margin: 10px auto 30px;">Unsure which model suits your business? We offer expert consultation and flexible financing.</p>
+                <a href="contact.html" class="btn">Get Expert Advice</a>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div>
+                    <h4 style="color:white">Keron Motors</h4>
+                    <p>Jinja | Masaka | Mbarara</p>
+                </div>
+                <div>
+                    <h4 style="color:white">Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="fleet.html">Our Tuk Tuks</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 style="color:white">Contact</h4>
+                    <p>+256 783 170 177</p>
+                    <p>info@keronmotors.ug</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <span>© Keron Motors, All Rights Reserved.</span>
+                <span><a href="#">Privacy</a> | <a href="#">Cookies</a></span>
+            </div>
+        </div>
+    </footer>
+
+    <a href="https://wa.me/256783170177" class="whatsapp-float" target="_blank">
+        <svg width="30" height="30" viewBox="0 0 24 24" fill="white"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654z"/></svg>
+    </a>
+
+    <script>
+        // --- SLIDESHOW SCRIPT ---
+        // List of your images
+        const heroImages = [
+            "1.jpg", "2.jpg", "3.jpg", "4.jpg", "5.jpg", 
+            "6.jpg", "7.jpg", "8.jpg", "9.jpg", "10.jpg", "11.jpg"
+        ];
+        
+        let currentIndex = 0;
+        const imgElement = document.getElementById("hero-slideshow-img");
+
+        // Function to fade out, change image, and fade in
+        function changeImage() {
+            if (imgElement) {
+                // 1. Fade Out
+                imgElement.style.opacity = 0;
+
+                // 2. Wait 0.8 seconds (same as CSS transition), then change image and fade in
+                setTimeout(() => {
+                    currentIndex = (currentIndex + 1) % heroImages.length;
+                    imgElement.src = heroImages[currentIndex];
+                    
+                    // 3. Fade In
+                    imgElement.style.opacity = 1;
+                }, 800);
+            }
+        }
+
+        // Start the slideshow
+        // Change image every 3.5 seconds
+        setInterval(changeImage, 3500);
+
+        // --- MOBILE MENU SCRIPT ---
+        function toggleMenu() {
+            document.getElementById('nav-menu').classList.toggle('active');
+        }
+    </script>
+</body>
+</html>

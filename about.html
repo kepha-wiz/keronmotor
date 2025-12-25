@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us | Keron Motors</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Oswald:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+</head>
+<body>
+    <header>
+        <div class="container nav-wrapper">
+            <a href="index.html" class="logo">
+                <span class="logo-mark"></span>
+                KERON <span>MOTORS</span>
+            </a>
+            <div class="mobile-toggle" onclick="toggleMenu()">☰</div>
+            <nav>
+                <ul id="nav-menu">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html" class="active">About</a></li>
+                    <li><a href="fleet.html">Our Tuk Tuks</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="branches.html">Branches</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Responsive Page Header -->
+    <header class="page-header">
+        <div class="container">
+            <h1>About Keron Motors</h1>
+            <p>Your Trusted Jinboss Dealer since 2010</p>
+        </div>
+    </header>
+
+    <main class="section-padding">
+        <div class="container">
+            <!-- Introduction Section -->
+            <div style="max-width: 800px; margin: 0 auto 60px; text-align: center;">
+                <h2 style="margin-bottom: 20px;">Driving Local Commerce</h2>
+                <p>Keron Motors has been at the forefront of providing reliable and efficient Tuk Tuk cargo tricycles across Jinja, Masaka, Mbarara, and beyond since 2010. We understand the vital role these vehicles play in local commerce and are committed to offering top-quality sales, servicing, and spare parts to keep your business moving.</p>
+            </div>
+
+            <!-- Feature Grid (Cards) -->
+            <div class="feature-grid">
+                <div class="card">
+                    <div class="icon-box">★</div>
+                    <h3 class="text-primary">Our Mission</h3>
+                    <p>To empower local businesses by providing durable, affordable, and reliable transport solutions tailored to the unique demands of the Ugandan terrain.</p>
+                </div>
+                <div class="card">
+                    <div class="icon-box">★</div>
+                    <h3 class="text-primary">Our Vision</h3>
+                    <p>To be the leading provider of cargo tricycles in East Africa, known for our integrity, technical expertise, and customer-first approach.</p>
+                </div>
+                <div class="card">
+                    <div class="icon-box">★</div>
+                    <h3 class="text-primary">Our Values</h3>
+                    <p>Quality, Reliability, and Service. We don't just sell vehicles; we build partnerships that last.</p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-bottom" style="justify-content: center;">
+                <span>© Keron Motors, All Rights Reserved.</span>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Mobile Menu Toggle Script -->
+    <script>
+        function toggleMenu(){
+            document.getElementById('nav-menu').classList.toggle('active');
+        }
+    </script>
+</body>
+</html>

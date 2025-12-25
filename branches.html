@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Our Branches | Keron Motors</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Oswald:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+</head>
+<body>
+    <header>
+        <div class="container nav-wrapper">
+            <a href="index.html" class="logo"><span class="logo-mark"></span>KERON <span>MOTORS</span></a>
+            <div class="mobile-toggle" onclick="toggleMenu()">☰</div>
+            <nav>
+                <ul id="nav-menu">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="fleet.html">Our Tuk Tuks</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="branches.html" class="active">Branches</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <header class="page-header">
+        <div class="container">
+            <h1>Our Locations</h1>
+            <p>Visit Our Branches Across Uganda</p>
+        </div>
+    </header>
+
+    <main class="section-padding">
+        <div class="container">
+            <div class="branch-grid">
+                <!-- Jinja -->
+                <div class="branch-card card">
+                    <div class="branch-header">
+                        <h3>Jinja Branch</h3>
+                        <small>Your Trusted Jinboss Dealer</small>
+                    </div>
+                    <div class="branch-body">
+                        <div class="contact-row"><strong>📍</strong> <span>Mbiko, Njeru</span></div>
+                        <div class="contact-row"><strong>📞</strong> <span>0706 507280</span></div>
+                        <div class="contact-row"><strong>✉️</strong> <span>info@keronmotors.com</span></div>
+                        <div class="opening-hours">
+                            <strong>Opening Hours</strong><br>
+                            Mon-Fri: 8AM-5PM<br>
+                            Sat: 9AM-1PM
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Masaka -->
+                <div class="branch-card card">
+                    <div class="branch-header">
+                        <h3>Masaka Branch</h3>
+                        <small>Town Center</small>
+                    </div>
+                    <div class="branch-body">
+                        <div class="contact-row"><strong>📍</strong> <span>Plot 12, Masaka Town Center</span></div>
+                        <div class="contact-row"><strong>📞</strong> <span>+256 783 170 178</span></div>
+                        <div class="contact-row"><strong>✉️</strong> <span>info@keronmotors.com</span></div>
+                        <div class="opening-hours">
+                            <strong>Opening Hours</strong><br>
+                            Mon-Fri: 8AM-5PM<br>
+                            Sat: 9AM-1PM
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Mbarara -->
+                <div class="branch-card card">
+                    <div class="branch-header">
+                        <h3>Mbarara Branch</h3>
+                        <small>Industrial Area</small>
+                    </div>
+                    <div class="branch-body">
+                        <div class="contact-row"><strong>📍</strong> <span>Plot 8, Mbarara Industrial Area</span></div>
+                        <div class="contact-row"><strong>📞</strong> <span>+256 783 170 179</span></div>
+                        <div class="contact-row"><strong>✉️</strong> <span>info@keronmotors.com</span></div>
+                        <div class="opening-hours">
+                            <strong>Opening Hours</strong><br>
+                            Mon-Fri: 8AM-5PM<br>
+                            Sat: 9AM-1PM
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <div class="container"><div class="footer-bottom" style="justify-content: center;"><span>© Keron Motors</span></div></div>
+    </footer>
+    <script>function toggleMenu(){document.getElementById('nav-menu').classList.toggle('active');}</script>
+</body>
+</html>

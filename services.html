@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Services | Keron Motors</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Oswald:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+</head>
+<body>
+    <header>
+        <div class="container nav-wrapper">
+            <a href="index.html" class="logo"><span class="logo-mark"></span>KERON <span>MOTORS</span></a>
+            <div class="mobile-toggle" onclick="toggleMenu()">☰</div>
+            <nav>
+                <ul id="nav-menu">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="fleet.html">Our Tuk Tuks</a></li>
+                    <li><a href="services.html" class="active">Services</a></li>
+                    <li><a href="branches.html">Branches</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <header class="page-header">
+        <div class="container">
+            <h1>Our Services</h1>
+            <p>Sales, Servicing, and Genuine Spare Parts</p>
+        </div>
+    </header>
+
+    <main class="section-padding">
+        <div class="container">
+            <div class="feature-grid">
+                <div class="card">
+                    <div class="icon-box">🛒</div>
+                    <h2>Tuk Tuk Sales</h2>
+                    <p>We offer a wide range of models tailored to your business needs. Whether you need an efficient urban mover or a heavy-duty hauler, we have the right vehicle for you.</p>
+                </div>
+                <div class="card">
+                    <div class="icon-box">🔧</div>
+                    <h2>Expert Servicing</h2>
+                    <p>Our dedicated team of technicians ensures your Tuk Tuk receives the best care and maintenance. We use diagnostic tools to keep your engine running smoothly.</p>
+                </div>
+                <div class="card">
+                    <div class="icon-box">⚙️</div>
+                    <h2>Genuine Spare Parts</h2>
+                    <p>We stock a comprehensive range of authentic spare parts. Don't compromise on quality—use parts designed for your specific model to ensure longevity.</p>
+                </div>
+            </div>
+
+            <div style="margin-top: 60px; background: var(--dark); color: var(--white); padding: 40px; border: var(--border);">
+                <h2 class="text-accent">Why Service With Us?</h2>
+                <p style="margin-bottom: 20px;">We understand downtime costs money. Our service centers in Jinja, Masaka, and Mbarara are equipped to get you back on the road fast.</p>
+                <ul style="line-height: 2;">
+                    <li>✓ Certified Technicians</li>
+                    <li>✓ Original Manufacturer Parts</li>
+                    <li>✓ Quick Turnaround Times</li>
+                </ul>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <div class="container"><div class="footer-bottom" style="justify-content: center;"><span>© Keron Motors</span></div></div>
+    </footer>
+    <script>function toggleMenu(){document.getElementById('nav-menu').classList.toggle('active');}</script>
+</body>
+</html>

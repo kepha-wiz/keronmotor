@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Contact Us | Keron Motors</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Oswald:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+</head>
+<body>
+    <header>
+        <div class="container nav-wrapper">
+            <a href="index.html" class="logo"><span class="logo-mark"></span>KERON <span>MOTORS</span></a>
+            <div class="mobile-toggle" onclick="toggleMenu()">☰</div>
+            <nav>
+                <ul id="nav-menu">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="fleet.html">Our Tuk Tuks</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="branches.html">Branches</a></li>
+                    <li><a href="contact.html" class="active">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <header class="page-header">
+        <div class="container">
+            <h1>Contact Us</h1>
+            <p>We are here to help you find the right vehicle.</p>
+        </div>
+    </header>
+
+    <main class="section-padding">
+        <!-- Using 'product-row' class to handle responsive layout (2 cols desktop, 1 col mobile) -->
+        <div class="container product-row">
+            <!-- Info Side -->
+            <div>
+                <h2>Get In Touch</h2>
+                <p style="margin-bottom: 30px;">Reach out to our sales team for consultations or visit one of our service centers.</p>
+                
+                <div style="margin-bottom: 20px;">
+                    <h4 class="text-primary">Phone</h4>
+                    <p>+256 783 170 177</p>
+                </div>
+                <div style="margin-bottom: 20px;">
+                    <h4 class="text-primary">Email</h4>
+                    <p>info@keronmotors.ug</p>
+                </div>
+                <div style="margin-bottom: 40px;">
+                    <h4 class="text-primary">Office Hours</h4>
+                    <p>Mon - Fri: 8:00 AM - 5:00 PM</p>
+                    <p>Saturday: 9:00 AM - 1:00 PM</p>
+                    <p>Sunday: Closed</p>
+                </div>
+
+                <div style="background: #eee; padding: 20px; border-left: 4px solid var(--accent);">
+                    <h4>Newsletter</h4>
+                    <p style="font-size: 0.9rem; margin-bottom: 10px;">Stay updated with the latest news and offers.</p>
+                    <form onsubmit="event.preventDefault(); alert('Subscribed!');">
+                        <input type="email" placeholder="Your email" style="padding: 10px; border: 1px solid #ccc; width: 70%;">
+                        <button type="submit" class="btn" style="padding: 10px 15px;">Go</button>
+                    </form>
+                </div>
+            </div>
+
+            <!-- Form Side -->
+            <div class="card">
+                <h3>Send a Message</h3>
+                <form onsubmit="event.preventDefault(); alert('Message Sent!');">
+                    <div style="margin-bottom: 15px;">
+                        <label>Name</label><br>
+                        <input type="text" style="width: 100%; padding: 10px; border: 1px solid #ccc;" required>
+                    </div>
+                    <div style="margin-bottom: 15px;">
+                        <label>Email</label><br>
+                        <input type="email" style="width: 100%; padding: 10px; border: 1px solid #ccc;" required>
+                    </div>
+                    <div style="margin-bottom: 15px;">
+                        <label>Subject</label><br>
+                        <select style="width: 100%; padding: 10px; border: 1px solid #ccc;">
+                            <option>Sales Inquiry</option>
+                            <option>Service Booking</option>
+                            <option>Spare Parts</option>
+                            <option>Other</option>
+                        </select>
+                    </div>
+                    <div style="margin-bottom: 15px;">
+                        <label>Message</label><br>
+                        <textarea rows="5" style="width: 100%; padding: 10px; border: 1px solid #ccc;" required></textarea>
+                    </div>
+                    <button type="submit" class="btn">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </main>
+
+    <a href="https://wa.me/256783170177" class="whatsapp-float" target="_blank">
+        <svg width="30" height="30" viewBox="0 0 24 24" fill="white"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654z"/></svg>
+    </a>
+
+    <footer>
+        <div class="container"><div class="footer-bottom" style="justify-content: center;"><span>© Keron Motors</span></div></div>
+    </footer>
+    <script>function toggleMenu(){document.getElementById('nav-menu').classList.toggle('active');}</script>
+</body>
+</html>
